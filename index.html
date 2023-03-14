@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 2</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="js/script1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      jQuery.validator.addMethod("phone", function(phone_number, element) {
+    phone_number = phone_number.replace(/\s+/g, "");
+    return this.optional(element) || !SimpleCheckOnExist(' +()-0123456789', phone_number);
+    }, "Некорректный номер телефона.");
+</script>
+</head>
+<body>
+  
+    <div class="container">
+  <div class="column blue"></div>
+  <div class="column brown">
+    <form>
+      <div>
+        <label for="text">Text:</label>
+        <input type="text" id="text" name="text">
+        <span id="textError"></span>
+      </div>
+      <div>
+        <label for="phone">Phone number:</label>
+        <input type="text" id="phone" name="phone">
+        <span id="phoneError"></span>
+      </div>
+      <div>
+        <label>Checkbox:</label>
+        <input type="checkbox" id="checkbox1" name="checkbox" value="1">
+        <label for="checkbox1">Position 1</label>
+        <input type="checkbox" id="checkbox2" name="checkbox" value="2">
+        <label for="checkbox2">Position 2</label>
+        <input type="checkbox" id="checkbox3" name="checkbox" value="3">
+        <label for="checkbox3">Position 3</label>
+        <span id="checkboxError"></span>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    
+  </div>
+  <div class="column pink"></div>
+  
+  
+
+</div>
+
+<form>
+  <div>
+    <label for="text">Text:</label>
+    <input type="text" id="text" name="text">
+    <span id="textError"></span>
+  </div>
+  <div>
+    <label for="phone">Phone number:</label>
+    <input type="text" id="phone" name="phone">
+    <span id="phoneError"></span>
+  </div>
+  <div>
+    <label>Checkbox:</label>
+    <input type="checkbox" id="checkbox1" name="checkbox" value="1">
+    <label for="checkbox1">Position 1</label>
+    <input type="checkbox" id="checkbox2" name="checkbox" value="2">
+    <label for="checkbox2">Position 2</label>
+    <input type="checkbox" id="checkbox3" name="checkbox" value="3">
+    <label for="checkbox3">Position 3</label>
+    <span id="checkboxError"></span>
+  </div>
+  <button type="submit">Submit</button>
+</form>
+
+<!-- <p>3rd task</p>
+<div class="container-fluid">
+  <div class="row flex-column-reverse flex-sm-row">
+    <div class="col-12 col-sm-3 bg-info">
+      <div class="row">
+        <div class="col-3 col-md-4">1.1</div>
+        <div class="col-3 col-md-4">1.2</div>
+        <div class="col-3 col-md-4">1.3</div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 bg-secondary">
+      <div class="row">
+        <div class="col-12 col-md-2">2.1</div>
+        <div class="col-12 col-md-2">2.2</div>
+        <div class="col-12 col-md-2">2.3</div>
+        <div class="col-12 col-md-2">2.4</div>
+        <div class="col-12 col-md-2">2.5</div>
+        <div class="col-12 col-md-2">2.6</div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-3 bg-danger">
+      <div class="row">
+        <div class="col-3 col-md-4">3.1</div>
+        <div class="col-3 col-md-4">3.2</div>
+        <div class="col-3 col-md-4">3.3</div>
+      </div>
+    </div>
+  </div>
+</div>
+<p>4th task</p>
+<p>grid layout</p>
+<div class="grid-container">
+  <div class="grid-item bg-blue">1</div>
+  <div class="grid-item bg-brown">2</div>
+  <div class="grid-item bg-pink">3</div>
+</div>
+<p>flexbox layout</p>
+<div class="flex-container">
+  <div class="flex-item bg-blue">1</div>
+  <div class="flex-item bg-brown">2</div>
+  <div class="flex-item bg-pink">3</div>
+</div>
+
+   -->
+</body>
+</html>
